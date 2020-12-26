@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/pavelanni/gopl.io/hello/morestrings"
+	"github.com/google/go-cmp/cmp"
+)
 
 func main() {
-	fmt.Println("Hello, мир!")
+	fmt.Println(morestrings.ReverseRunes("Hello, мир!"))
+	fmt.Println(cmp.Diff("Hello World", "Hello Go"))
 }
